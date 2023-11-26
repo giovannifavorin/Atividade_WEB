@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <title>Atividade</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.3.1/dist/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+</head>
+
+<body>
+    {{#erros}}
+    <div class="alert-warning">
+        {{nomeCampo}} Não pode ser vazio
+    </div>
+    {{/erros}}
+
+
+
+    <div class="container">
+        <form action="/dados" method="post">
+            <div class="row mt-3">
+                <div class="col-6">
+                    <h3>Dados pessoais</h3>
+                    <div class="mb-3 mt-3">
+                        <h4>Nome: {{ dados_pessoais.nome }}</h4>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>CPF: {{ dados_pessoais.cpf }}</h4>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Data de nascimento: {{ dados_pessoais.data_nascimento }}</h4>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Endereço: {{ dados_pessoais.endereco }}</h4>
+                    </div>
+
+
+                    <div class="mb-3 mt-3">
+                        <h4>Cidade: {{ dados_pessoais.cidade }}</h4>
+                    </div>
+
+
+                    <div class="mb-3 mt-3">
+                        <h4>CEP: {{ dados_pessoais.cep }}</h4>
+                    </div>
+
+
+                    <div class="mb-3 mt-3">
+                        <h4>Email: {{ dados_pessoais.email }}</h4>
+                    </div>
+
+
+                    <div class="mb-3 mt-3">
+                        <h4>Telefone: {{ dados_pessoais.telefone }}</h4>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Estado: {{ dados_pessoais.estado }}</h4>
+                    </div>
+
+                </div>
+
+                <div class="col-6">
+                    <h3>Dados da consulta</h3>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Especialidade: {{dados_consulta.especialidade}}</label>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Data e hora da consulta: {{dados_consulta.data_hora}}</label>
+                    </div>
+
+                    <div class="mb-3 mt-3">
+                        <h4>Alérgicos: {{dados_consulta.antibioticos}}</h4>
+                    </div>
+
+
+                    <div class="mb-3 mt-3">
+                        <h4>Alérgicos: {{dados_consulta.antiinflamatorios}}</h4>
+                    </div>
+                   
+
+                    <div class="mb-3 mt-3">
+                        <h4>Informações adicionais: {{dados_consulta.informacoes_adicionais}}</h4>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </form>
+
+    </div>
+</body>
